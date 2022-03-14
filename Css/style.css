@@ -1,0 +1,222 @@
+/* font-family: 'Lato' && 'Merriweather' */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primaryColor: #6b63ff;
+  --secundaryColor: #d7d4ff;
+  --otherColor1: #ffffff;
+  --otherColor2: #f9f9f9;
+  --otherColor3: #555555;
+  --otherColor4: #2a2a2a;
+  --titleFont: "Merriweather", serif;
+  --textFont: "Lato", sans-serif;
+}
+
+::selection {
+  background: var(--primaryColor);
+  color: var(--otherColor1);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background: var(--otherColor3);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background: var(--primaryColor);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: var(--otherColor2);
+  border: 2px solid var(--primaryColor);
+}
+
+h1,
+h2 {
+  font-family: var(--titleFont);
+}
+
+p,
+span {
+  font-family: var(--textFont);
+}
+
+header {
+  height: 560px;
+  padding: 100px min(8vw, 100px);
+  display: flex;
+  justify-content: space-between;
+  background: var(--secundaryColor) url("../Images/bgHeader.svg") no-repeat
+    center right;
+}
+
+header div:first-child {
+  width: 380px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  font-size: clamp(3.2rem, 5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--otherColor4);
+}
+
+header p {
+  margin-bottom: 45px;
+  font-size: clamp(1.8rem, 4vw, 1.9rem);
+  color: var(--otherColor3);
+}
+
+header span {
+  width: 155px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
+  border-radius: 5px;
+  background: var(--primaryColor);
+  color: var(--otherColor1);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+header span:hover {
+  box-shadow: 0px 0px 5px 5px rgba(23, 23, 23, 0.2),
+    0px 0px 10px 10px rgba(23, 23, 23, 0.1),
+    inset 0px 0px 5px 5px rgba(23, 23, 23, 0.3);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+main {
+  padding: 150px 50px;
+  background: var(--otherColor2);
+}
+
+main #posts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+main #posts .cards {
+  width: 340px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  margin-inline: 5px;
+  transition: 0.5s;
+}
+
+main #posts .cards:hover {
+  transform: scale(1.1);
+}
+
+main #posts .cardImage {
+  width: 340px;
+  height: 222px;
+}
+
+main #posts #cardImage1 {
+  background: #ff6363;
+}
+main #posts #cardImage2 {
+  background: #63ecff;
+}
+main #posts #cardImage3 {
+  background: #f363ff;
+}
+main #posts #cardImage4 {
+  background: #63ff73;
+}
+main #posts #cardImage5 {
+  background: #ffdd63;
+}
+main #posts #cardImage6 {
+  background: #6663ff;
+}
+
+main #posts .cardText {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+main #posts .cardText h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+main #posts .cardText p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+footer {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--secundaryColor);
+}
+
+footer h2 {
+  font-size: 3.2rem;
+  margin-bottom: 60px;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+footer .inputs {
+  width: clamp(360px, 60vw, 480px);
+  padding: 20px 15px;
+  font-family: var(--textFont);
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+footer #mensagem {
+  height: 160px;
+}
+
+footer input[type="submit"] {
+  margin-top: 30px;
+  padding: 12px;
+  color: var(--otherColor1);
+  background: var(--primaryColor);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    height: 800px;
+    padding-top: 30px;
+    background-position: center 370px;
+  }
+}
